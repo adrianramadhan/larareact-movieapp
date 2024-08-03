@@ -15,8 +15,9 @@ Input.propTypes = {
     handleChange: PropTypes.func,
     placeholder: PropTypes.string,
     isError: PropTypes.bool,
+    id: PropTypes.string, // Add id to the prop types
 };
-
+// Input.jsx
 export default function Input({
     type = "text",
     name,
@@ -30,6 +31,7 @@ export default function Input({
     handleChange,
     placeholder,
     isError,
+    id, // Add id to the props
     ...props
 }) {
     const input = useRef();
@@ -44,6 +46,7 @@ export default function Input({
         <div className="flex flex-col items-start">
             <input
                 {...props}
+                id={id} // Apply id here
                 type={type}
                 name={name}
                 value={value}

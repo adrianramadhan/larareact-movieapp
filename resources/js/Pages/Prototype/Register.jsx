@@ -33,10 +33,11 @@ export default function Register() {
                                     <Label
                                         forInput="fullname"
                                         value="Full Name"
-                                    ></Label>
+                                    />
                                     <Input
                                         type="text"
                                         name="fullname"
+                                        id="fullname"
                                         placeholder="Your fullname..."
                                         defaultValue="Adrian React"
                                     />
@@ -49,6 +50,7 @@ export default function Register() {
                                     <Input
                                         type="email"
                                         name="email"
+                                        id="email"
                                         placeholder="Your Email Address"
                                         defaultValue="adrian@react.com"
                                     />
@@ -61,6 +63,7 @@ export default function Register() {
                                     <Input
                                         type="password"
                                         name="password"
+                                        id="password"
                                         placeholder="Your Password"
                                         defaultValue="eeeeeeeeeeeeeee"
                                     />
