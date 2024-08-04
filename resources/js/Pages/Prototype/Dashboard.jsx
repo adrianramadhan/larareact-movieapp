@@ -2,6 +2,7 @@ import Flickity from "react-flickity-component";
 import { Head } from "@inertiajs/react";
 import Authenticated from "@/Layouts/Authenticated/Index.jsx";
 import FeaturedMovie from "@/Components/FeaturedMovie";
+import MovieCard from "@/Components/MovieCard";
 
 export default function Dashboard() {
     const flicityOptions = {
@@ -48,38 +49,13 @@ export default function Dashboard() {
                 <Flickity className="gap-[30px]" options={flicityOptions}>
                     {[1, 2, 3, 4].map((i) => {
                         return (
-                            <div
+                            <MovieCard
                                 key={i}
-                                className="absolute group overflow-hidden mr-[30px]"
-                            >
-                                <img
-                                    src="/images/browse-1.png"
-                                    className="object-cover rounded-[30px] h-[340px] w-[250px]"
-                                    alt=""
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px] rounded-br-[28px]">
-                                    <div className="px-7 pb-7">
-                                        <div className="font-medium text-xl text-white">
-                                            Meong Golden
-                                        </div>
-                                        <p className="mb-0 text-gray-300 text-base mt-[10px]">
-                                            Horror • Love
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="absolute top-1/2 left-1/2 -translate-y-[500px] group-hover:-translate-y-1/2 -translate-x-1/2 z-20 transition ease-in-out duration-500">
-                                    <img
-                                        src="/icons/ic_play.svg"
-                                        className=""
-                                        width="50"
-                                        alt=""
-                                    />
-                                </div>
-                                <a
-                                    href="watching.html"
-                                    className="inset-0 absolute z-50"
-                                ></a>
-                            </div>
+                                slug="the-tomorrow-war"
+                                name={`The Tomorrow War ${i}`}
+                                category="Action, Sci-Fi"
+                                thumbnail="https://image.tmdb.org/t/p/w500/34nDCQZwaEvsy4CFO5hkGRFDCVU.jpg"
+                            />
                         );
                     })}
                 </Flickity>
